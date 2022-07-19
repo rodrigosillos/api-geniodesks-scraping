@@ -62,7 +62,7 @@ for lead in json_data['data']:
 
     script_descriptor = open("magento-carrinho-produtos.py")
     a_script = script_descriptor.read()
-    sys.argv = ["a_script.py", str(i), contact]
+    sys.argv = ["magento-carrinho-produtos.py", str(i), contact]
     exec(a_script)
     
     i+=1

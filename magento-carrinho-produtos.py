@@ -51,8 +51,32 @@ group = 0
 field = 0
 
 for lead in json_data['data']:
+    produto_id = lead[0]
     produto_nome = lead[1]
+    
     produto_imagem = 'https://admin.geniodesks.signashop.com.br/media/catalog/product/m/e/mesa_com_regulagem_de_altura_geniodesk_pro.jpg'
+
+    if produto_id == 338:
+        produto_imagem = 'https://admin.geniodesks.signashop.com.br/media/catalog/product/g/e/geniodesk_plus.jpg'
+    elif produto_id == 429:
+        produto_imagem = 'https://admin.geniodesks.signashop.com.br/media/catalog/product/c/a/cadeira_geniodesk.jpg'
+    elif produto_id == 406:
+        produto_imagem = 'https://admin.geniodesks.signashop.com.br/media/catalog/product/v/e/veertebra-para-gerenciamento-de-cabos-3_2.jpg'
+    elif produto_id == 395:
+        produto_imagem = 'https://admin.geniodesks.signashop.com.br/media/catalog/product/c/a/calha_para_gerenciamento_de_cabos_1.jpg'
+    elif produto_id == 337:
+        produto_imagem = 'https://admin.geniodesks.signashop.com.br/media/catalog/product/m/e/mesa_com_regulagem_de_altura_geniodesk_pro.jpg'
+    elif produto_id == 209:
+        produto_imagem = 'https://admin.geniodesks.signashop.com.br/media/catalog/product/g/e/geniodesk_home.jpg'
+    elif produto_id == 396:
+        produto_imagem = 'https://admin.geniodesks.signashop.com.br/media/catalog/product/t/a/tapete-anti-fadiga.jpg'
+    elif produto_id == 223:
+        produto_imagem = 'https://admin.geniodesks.signashop.com.br/media/catalog/product/s/u/suporte-de-monitor-articulado-pistao-gas.jpg'  
+    elif produto_id == 468:
+        produto_imagem = 'https://admin.geniodesks.signashop.com.br/media/catalog/product/b/u/bundle_kit_1_-_geniodesks.jpg'
+    elif produto_id == 234:
+        produto_imagem = 'https://admin.geniodesks.signashop.com.br/media/catalog/product/s/u/suporte_de_cpu_geniodesks_1.jpg'                                      
+
     produto_preco = lead[4]
 
     payload["contact"]["fieldValues"].append({"field": arr_fields[group][field], 'value': produto_nome})
