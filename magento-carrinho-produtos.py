@@ -5,10 +5,10 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from webdriver_manager.chrome import ChromeDriverManager
 import time
-from bs4 import BeautifulSoup
 import pandas as pd
 import json
 import sys
+import requests
 
 options = Options()
 # options.add_argument("headless")
@@ -32,40 +32,46 @@ driver.execute_script("arguments[0].click();", driver.find_element(By.XPATH, '//
 # driver.execute_script("arguments[0].click();", driver.find_element(By.ID, 'report_shopcart_export_button'))
 
 # link = driver.find_element(By.XPATH, "//tbody/tr[@title]")
-# python3 selenium-abandoned-car.py 3
+# python3 selenium-abandoned-car.py 3 12530
 
 driver.execute_script("arguments[0].click();", driver.find_element(By.XPATH, '//tbody/tr[@title][' + sys.argv[1] + ']'))
 
 time.sleep(5)
 
-# print(driver.page_source)
-
 table_MN = pd.read_html(driver.page_source, attrs = {'id': 'customer_cart_grid1_table'})
-df = table_MN[0]
-result = df.to_json(orient="split")
-parsed = json.loads(result)
-print(json.dumps(parsed, indent=4))
+json_data = json.loads(table_MN[0].to_json(orient="split"))
 
-# soup_level1=BeautifulSoup(driver.page_source, 'lxml')
-# table = soup_level1.find_all('table')[1]
+payload = {"contact": {'fieldValues': []}}
 
-# table_MN = pd.read_html(str(table), header=0)
+arr_fields = [[39,25,26], [27,28,29]]
 
-# df = table_MN[0]
+group = 0
+field = 0
 
-# result = df.to_json(orient="split")
-# parsed = json.loads(result)
-# print(json.dumps(parsed, indent=4))
+for lead in json_data['data']:
+    produto_nome = lead[1]
+    produto_preco = lead[4]
 
-# ID_Produto = driver.find_element(By.XPATH, '//tbody/tr/td[5]')
-# print(ID_Produto.text)
-# # print(ID_Produto.get_attribute("value"))
+    payload["contact"]["fieldValues"].append({"field": arr_fields[group][field], 'value': produto_nome})
+    field+=1
 
-# time.sleep(15)
+    payload["contact"]["fieldValues"].append({"field": arr_fields[group][field], 'value': 'imagem'})
+    field+=1
 
-# driver.execute_script("arguments[0].click();", driver.find_element(By.XPATH, '//a[text()="Faturamento"]'))
-# driver.find_element(By.ID, "frmFaturamento").submit()
-# driver.execute_script("arguments[0].click();", driver.find_element(By.ID, "invoicecheck"))
-# driver.find_element(By.ID, "frmExcelFaturamento").submit()
+    payload["contact"]["fieldValues"].append({"field": arr_fields[group][field], 'value': produto_preco})
+    group+=1
+    field=0
+
+# print(json.dumps(payload, indent=4))
+
+url = "https://geniodesks.api-us1.com/api/3/contacts/" + sys.argv[2]
+
+headers = {
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+    "Api-Token": "e05c6ff73816579c31f23c5e1c86de782c50c9c2164c2906e1c0d08cf04b3e4ad4829551"
+}
+
+response = requests.put(url, json=payload, headers=headers)
 
 driver.close()
