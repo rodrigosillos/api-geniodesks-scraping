@@ -1,8 +1,11 @@
+#!/usr/bin/python3
+
 import pandas as pd
 
 import requests
 import json
 import time
+import sys
 
 hed = {
     'Host': 'admin.geniodesks.signashop.com.br',
@@ -37,11 +40,6 @@ url = 'https://admin.geniodesks.signashop.com.br/index.php/painel/report_shopcar
 
 r = requests.post(url, json=data, headers=hed)
 
-
-# df = table_MN[2]
-
-# result = df.to_json(orient="split")
-
 table_MN = pd.read_html(r.text)
 json_data = json.loads(table_MN[2].to_json(orient="split"))
 
@@ -49,7 +47,7 @@ i = 1
 
 for lead in json_data['data']:
     email = lead[1]
-    # print(email)
+
     url = "https://geniodesks.api-us1.com/api/3/contacts?email=" + email
 
     headers = {
@@ -61,14 +59,12 @@ for lead in json_data['data']:
     json_data = json.loads(response.text)
 
     contact = json_data['scoreValues'][0]['contact']
-    print(contact)
 
-    # exec(open("selenium-carrinho-produtos.py " + i + " " + contact).read())
-    # i+1
+    script_descriptor = open("magento-carrinho-produtos.py")
+    a_script = script_descriptor.read()
+    sys.argv = ["a_script.py", str(i), contact]
+    exec(a_script)
+    
+    i+=1
 
-    # time.sleep(10)
-
-# print(json.dumps(parsed, inednt=4))
-# print(df.head())
-# print(df.info())
-# print(df['Status Cliente'])
+    time.sleep(10)

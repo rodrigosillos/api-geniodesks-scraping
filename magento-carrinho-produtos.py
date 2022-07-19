@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
@@ -32,37 +34,36 @@ driver.execute_script("arguments[0].click();", driver.find_element(By.XPATH, '//
 # driver.execute_script("arguments[0].click();", driver.find_element(By.ID, 'report_shopcart_export_button'))
 
 # link = driver.find_element(By.XPATH, "//tbody/tr[@title]")
-# python3 selenium-abandoned-car.py 3 12530
+# python3 selenium-abandoned-car.py linha contato
 
 driver.execute_script("arguments[0].click();", driver.find_element(By.XPATH, '//tbody/tr[@title][' + sys.argv[1] + ']'))
 
-time.sleep(5)
+time.sleep(10)
 
 table_MN = pd.read_html(driver.page_source, attrs = {'id': 'customer_cart_grid1_table'})
 json_data = json.loads(table_MN[0].to_json(orient="split"))
 
 payload = {"contact": {'fieldValues': []}}
 
-arr_fields = [[39,25,26], [27,28,29]]
+arr_fields = [[39,25,26], [27,28,29], [30,40,32], [33,42,41], [36,43,44]]
 
 group = 0
 field = 0
 
 for lead in json_data['data']:
     produto_nome = lead[1]
+    produto_imagem = 'https://admin.geniodesks.signashop.com.br/media/catalog/product/m/e/mesa_com_regulagem_de_altura_geniodesk_pro.jpg'
     produto_preco = lead[4]
 
     payload["contact"]["fieldValues"].append({"field": arr_fields[group][field], 'value': produto_nome})
     field+=1
 
-    payload["contact"]["fieldValues"].append({"field": arr_fields[group][field], 'value': 'imagem'})
+    payload["contact"]["fieldValues"].append({"field": arr_fields[group][field], 'value': produto_imagem})
     field+=1
 
     payload["contact"]["fieldValues"].append({"field": arr_fields[group][field], 'value': produto_preco})
     group+=1
     field=0
-
-# print(json.dumps(payload, indent=4))
 
 url = "https://geniodesks.api-us1.com/api/3/contacts/" + sys.argv[2]
 
