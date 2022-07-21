@@ -14,14 +14,14 @@ hed = {
     'Accept-Language': 'en-US,en;q=0.5',
     'Accept-Encoding': 'gzip, deflate, br',
     'Connection': 'keep-alive',
-    'Cookie': '_BEAMER_USER_ID_TyUhCZkT5208=be9751f2-ea47-4cab-af69-dee77fe5da6f; _BEAMER_FIRST_VISIT_TyUhCZkT5208=2022-05-20T13:49:42.519Z; _BEAMER_DATE_TyUhCZkT5208=2022-05-20T13:49:42.800Z; _ga=GA1.3.855274881.1653054583; _gcl_au=1.1.968973464.1653054857; _fbp=fb.2.1653054857837.1191215823; X-Store=1; adminhtml=6o1oo5pnhlt5u4u31jlfvb1adq; _gid=GA1.3.2069784406.1658152036',
+    'Cookie': '_BEAMER_USER_ID_TyUhCZkT5208=be9751f2-ea47-4cab-af69-dee77fe5da6f; _BEAMER_FIRST_VISIT_TyUhCZkT5208=2022-05-20T13:49:42.519Z; _BEAMER_DATE_TyUhCZkT5208=2022-05-20T13:49:42.800Z; _ga=GA1.3.855274881.1653054583; _gcl_au=1.1.968973464.1653054857; _fbp=fb.2.1653054857837.1191215823; adminhtml=6o1oo5pnhlt5u4u31jlfvb1adq; _gid=GA1.3.2069784406.1658152036; X-Store=1; _BEAMER_FILTER_BY_URL_TyUhCZkT5208=false',
     'Sec-Fetch-Dest': 'document',
     'Sec-Fetch-Mode': 'navigate',
     'Sec-Fetch-Site': 'same-origin',
     'Sec-Fetch-User': '?1',
     'Upgrade-Insecure-Requests': '1',
     'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0',
-    'Referer': 'https://admin.geniodesks.signashop.com.br/index.php/painel/report_shopcart/abandoned/key/21aa8d23a1a8e819a13a0ffa0d97cccb/filter/Y3JlYXRlZF9hdCU1QmxvY2FsZSU1RD1wdF9CUiZ1cGRhdGVkX2F0JTVCbG9jYWxlJTVEPXB0X0JS/form_key/J1JbkQTLV2nmJH7J/',
+    'Referer': '',
 
     'BEAMER_DATE_TyUhCZkT5208':	'2022-05-20T13:49:42.800Z',
     '_BEAMER_FILTER_BY_URL_TyUhCZkT5208': 'false',
@@ -60,9 +60,9 @@ for lead in json_data['data']:
 
     contact = json_data['scoreValues'][0]['contact']
 
-    script_descriptor = open("magento-carrinho-produtos.py")
+    script_descriptor = open("magento_carrinho_produtos.py")
     a_script = script_descriptor.read()
-    sys.argv = ["magento-carrinho-produtos.py", str(i), contact]
+    sys.argv = ["magento_carrinho_produtos.py", str(i), contact]
     exec(a_script)
     
     i+=1
