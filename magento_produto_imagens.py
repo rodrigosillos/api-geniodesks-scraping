@@ -141,7 +141,15 @@ def sku_imagem(sku):
     elif sku == 'genio-desk-plus-1600 x 700mm-Aveiro-Preto':
         produto_imagem = 'https://admin.geniodesks.signashop.com.br/media/catalog/product/g/e/geniodesk-plus-tampo-aveiro-base-preto2_3.jpg'
     elif sku == 'suporte-monitor':
-        produto_imagem = 'https://admin.geniodesks.signashop.com.br/media/catalog/product/s/u/suporte-de-monitor-articulado-pistao-gas.jpg'           
+        produto_imagem = 'https://admin.geniodesks.signashop.com.br/media/catalog/product/s/u/suporte-de-monitor-articulado-pistao-gas.jpg'
+    elif sku == 'genio-desk-pro-1600-teca-preto':
+        produto_imagem = 'https://admin.geniodesks.signashop.com.br/media/catalog/product/1/a/1a_1_1.jpg'
+    elif sku == 'GD311':
+        produto_imagem = 'https://admin.geniodesks.signashop.com.br/media/catalog/product/e/s/estojo_organizador_-_geniodesks.jpg'
+    elif sku == 'desk-pad':
+        produto_imagem = 'https://admin.geniodesks.signashop.com.br/media/catalog/product/1/_/1_6.jpg'
+    elif sku == 'genio-desk-home-1600 x 700mm-Carvalho Avelã-Preto':
+        produto_imagem = 'https://admin.geniodesks.signashop.com.br/media/catalog/product/g/e/geniodesk_home_tampo_carvalho_avel_base_preto_2.jpg'                                          
     else:
         produto_imagem = 'https://admin.geniodesks.signashop.com.br/media/catalog/product/g/e/geniodesk_plus.jpg'                                                                                                                                                                                                                                                                                                            
 

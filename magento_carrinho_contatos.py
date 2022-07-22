@@ -43,7 +43,7 @@ r = requests.post(url, json=data, headers=hed)
 table_MN = pd.read_html(r.text)
 json_data = json.loads(table_MN[2].to_json(orient="split"))
 
-i = 1
+linha = 1
 
 for lead in json_data['data']:
     email = lead[1]
@@ -58,13 +58,16 @@ for lead in json_data['data']:
     response = requests.get(url, headers=headers)
     json_data = json.loads(response.text)
 
-    contact = json_data['scoreValues'][0]['contact']
+    if len(json_data['scoreValues']) > 0:
+        contact = json_data['scoreValues'][0]['contact']
+    else:
+        contact = json_data['contacts'][0]['id']
 
     script_descriptor = open("magento_carrinho_produtos.py")
     a_script = script_descriptor.read()
-    sys.argv = ["magento_carrinho_produtos.py", str(i), contact]
+    sys.argv = ["magento_carrinho_produtos.py", str(linha), contact]
     exec(a_script)
     
-    i+=1
+    linha+=1
 
     time.sleep(10)
