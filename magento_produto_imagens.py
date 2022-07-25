@@ -89,7 +89,9 @@ def sku_imagem(sku):
     elif sku == 'genio-desk-pro-1600 x 700mm-Aveiro-Preto':
         produto_imagem = 'https://admin.geniodesks.signashop.com.br/media/catalog/product/m/e/mesa_com_regulagem_de_altura_geniodesk_pro.jpg'
     elif sku == 'GD450':
-        produto_imagem = 'https://admin.geniodesks.signashop.com.br/media/catalog/product/c/a/cadeira_geniodesk.jpg' 
+        produto_imagem = 'https://admin.geniodesks.signashop.com.br/media/catalog/product/c/a/cadeira_geniodesk.jpg'
+    elif sku == 'GD455':
+        produto_imagem = 'https://admin.geniodesks.signashop.com.br/media/catalog/product/g/e/geniostoool_-_banqueta_ergonomica_para_escrit_rio-1.jpg'          
     elif sku == 'genio-desk-plus-somente-estrutura-branco-6':
         produto_imagem = 'https://admin.geniodesks.signashop.com.br/media/catalog/product/i/m/img_3502_baixa.jpg'
     elif sku == 'genio-desk-plus-1200 x 700mm-Preto-Preto':
@@ -146,8 +148,16 @@ def sku_imagem(sku):
         produto_imagem = 'https://admin.geniodesks.signashop.com.br/media/catalog/product/1/a/1a_1_1.jpg'
     elif sku == 'GD311':
         produto_imagem = 'https://admin.geniodesks.signashop.com.br/media/catalog/product/e/s/estojo_organizador_-_geniodesks.jpg'
+    elif sku == 'GD355':
+        produto_imagem = 'https://admin.geniodesks.signashop.com.br/media/catalog/product/b/u/bundle_kit_1_-_geniodesks_1.jpg'
+    elif sku == 'GD350':
+        produto_imagem = 'https://admin.geniodesks.signashop.com.br/media/catalog/product/b/u/bundle_kit_1_-_geniodesks_3.jpg'        
+    elif sku == 'GD360':
+        produto_imagem = 'https://admin.geniodesks.signashop.com.br/media/catalog/product/b/u/bundle_kit_1_-_geniodesks_2.jpg'             
     elif sku == 'desk-pad':
         produto_imagem = 'https://admin.geniodesks.signashop.com.br/media/catalog/product/1/_/1_6.jpg'
+    elif sku == 'genio-desk-pro-1600 x 700mm-Carvalho Prata-Preto':
+        produto_imagem = 'https://admin.geniodesks.signashop.com.br/media/catalog/product/g/e/geniodesk-pro-tampo-carvalho-prata-base-preto2_7.jpg'        
     elif sku == 'genio-desk-home-1600 x 700mm-Carvalho Avelã-Preto':
         produto_imagem = 'https://admin.geniodesks.signashop.com.br/media/catalog/product/g/e/geniodesk_home_tampo_carvalho_avel_base_preto_2.jpg'                                          
     else:

@@ -14,7 +14,7 @@ hed = {
     'Accept-Language': 'en-US,en;q=0.5',
     'Accept-Encoding': 'gzip, deflate, br',
     'Connection': 'keep-alive',
-    'Cookie': '_BEAMER_USER_ID_TyUhCZkT5208=be9751f2-ea47-4cab-af69-dee77fe5da6f; _BEAMER_FIRST_VISIT_TyUhCZkT5208=2022-05-20T13:49:42.519Z; _BEAMER_DATE_TyUhCZkT5208=2022-05-20T13:49:42.800Z; _ga=GA1.3.855274881.1653054583; _gcl_au=1.1.968973464.1653054857; _fbp=fb.2.1653054857837.1191215823; adminhtml=6o1oo5pnhlt5u4u31jlfvb1adq; _gid=GA1.3.2069784406.1658152036; X-Store=1; _BEAMER_FILTER_BY_URL_TyUhCZkT5208=false',
+    'Cookie': '_BEAMER_USER_ID_TyUhCZkT5208=be9751f2-ea47-4cab-af69-dee77fe5da6f; _BEAMER_FIRST_VISIT_TyUhCZkT5208=2022-05-20T13:49:42.519Z; _BEAMER_DATE_TyUhCZkT5208=2022-07-22T21:40:24.960Z; _ga=GA1.3.855274881.1653054583; _gcl_au=1.1.968973464.1653054857; _fbp=fb.2.1653054857837.1191215823; signashop_news_sidebar=1; adminhtml=uafeuuuts8f6fep931a98pgu3e; _gid=GA1.3.2074550384.1658696858; _BEAMER_FILTER_BY_URL_TyUhCZkT5208=false',
     'Sec-Fetch-Dest': 'document',
     'Sec-Fetch-Mode': 'navigate',
     'Sec-Fetch-Site': 'same-origin',
@@ -36,7 +36,7 @@ hed = {
 }
 
 data = {}
-url = 'https://admin.geniodesks.signashop.com.br/index.php/painel/report_shopcart/abandoned/key/206dd69adcd0993902f0677c1ace9962/filter/Y3JlYXRlZF9hdCU1QmxvY2FsZSU1RD1wdF9CUiZ1cGRhdGVkX2F0JTVCbG9jYWxlJTVEPXB0X0JS/form_key/B6XbFhfzfSGcrRzi/'
+url = 'https://admin.geniodesks.signashop.com.br/index.php/painel/report_shopcart/abandoned/key/830cf2253355fa8b3f6fefcb546e4533/filter/Y3JlYXRlZF9hdCU1QmxvY2FsZSU1RD1wdF9CUiZ1cGRhdGVkX2F0JTVCbG9jYWxlJTVEPXB0X0JS/form_key/fzqetY2ol69llxlh/'
 
 r = requests.post(url, json=data, headers=hed)
 
