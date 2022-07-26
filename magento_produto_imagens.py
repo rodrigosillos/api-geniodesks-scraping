@@ -146,6 +146,14 @@ def sku_imagem(sku):
         produto_imagem = 'https://admin.geniodesks.signashop.com.br/media/catalog/product/s/u/suporte-de-monitor-articulado-pistao-gas.jpg'
     elif sku == 'genio-desk-pro-1600-teca-preto':
         produto_imagem = 'https://admin.geniodesks.signashop.com.br/media/catalog/product/1/a/1a_1_1.jpg'
+    elif sku == 'tampo-genio-desk-art-1200 x 700mm':
+        produto_imagem = 'https://admin.geniodesks.signashop.com.br/media/catalog/product/5/_/5_2_8.jpg'
+    elif sku == 'tampo-genio-desk-art-1400 x 700mm':
+        produto_imagem = 'https://admin.geniodesks.signashop.com.br/media/catalog/product/5/_/5_2_9.jpg'
+    elif sku == 'tampo-genio-desk-art-1600 x 700mm':
+        produto_imagem = 'https://admin.geniodesks.signashop.com.br/media/catalog/product/5/_/5_2_10.jpg'
+    elif sku == 'tampo-genio-desk-art-1800 x 700mm':
+        produto_imagem = 'https://admin.geniodesks.signashop.com.br/media/catalog/product/5/_/5_2_11.jpg'
     elif sku == 'GD311':
         produto_imagem = 'https://admin.geniodesks.signashop.com.br/media/catalog/product/e/s/estojo_organizador_-_geniodesks.jpg'
     elif sku == 'GD355':
@@ -156,6 +164,8 @@ def sku_imagem(sku):
         produto_imagem = 'https://admin.geniodesks.signashop.com.br/media/catalog/product/b/u/bundle_kit_1_-_geniodesks_2.jpg'             
     elif sku == 'desk-pad':
         produto_imagem = 'https://admin.geniodesks.signashop.com.br/media/catalog/product/1/_/1_6.jpg'
+    elif sku == 'genio-desk-pro-1600 x 700mm-Amêndola Rústica-Preto':
+        produto_imagem = 'https://admin.geniodesks.signashop.com.br/media/catalog/product/g/e/geniodesk-pro-tampo-amendola-rustica-base-preto2_7.jpg'        
     elif sku == 'genio-desk-pro-1600 x 700mm-Carvalho Prata-Preto':
         produto_imagem = 'https://admin.geniodesks.signashop.com.br/media/catalog/product/g/e/geniodesk-pro-tampo-carvalho-prata-base-preto2_7.jpg'        
     elif sku == 'genio-desk-home-1600 x 700mm-Carvalho Avelã-Preto':

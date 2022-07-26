@@ -46,7 +46,7 @@ json_data = json.loads(table_MN[0].to_json(orient="split"))
 
 payload = {"contact": {'fieldValues': []}}
 
-arr_fields = [[39,25,26], [27,28,29], [30,40,32], [33,42,41], [36,43,44]]
+arr_fields = [[39,25,26], [27,28,29], [30,40,32], [33,42,41], [36,43,44], [68,69,70], [71,72,73]]
 
 group = 0
 field = 0
