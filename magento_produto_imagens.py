@@ -164,6 +164,8 @@ def sku_imagem(sku):
         produto_imagem = 'https://admin.geniodesks.signashop.com.br/media/catalog/product/b/u/bundle_kit_1_-_geniodesks_2.jpg'             
     elif sku == 'desk-pad':
         produto_imagem = 'https://admin.geniodesks.signashop.com.br/media/catalog/product/1/_/1_6.jpg'
+    elif sku == '':
+        produto_imagem = ''        
     elif sku == 'genio-desk-pro-1600 x 700mm-Amêndola Rústica-Preto':
         produto_imagem = 'https://admin.geniodesks.signashop.com.br/media/catalog/product/g/e/geniodesk-pro-tampo-amendola-rustica-base-preto2_7.jpg'        
     elif sku == 'genio-desk-pro-1600 x 700mm-Carvalho Prata-Preto':
