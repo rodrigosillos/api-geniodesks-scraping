@@ -14,29 +14,31 @@ hed = {
     'Accept-Language': 'en-US,en;q=0.5',
     'Accept-Encoding': 'gzip, deflate, br',
     'Connection': 'keep-alive',
-    'Cookie': '_BEAMER_USER_ID_TyUhCZkT5208=be9751f2-ea47-4cab-af69-dee77fe5da6f; _BEAMER_FIRST_VISIT_TyUhCZkT5208=2022-05-20T13:49:42.519Z; _BEAMER_DATE_TyUhCZkT5208=2022-08-01T15:13:54.581Z; _ga=GA1.3.855274881.1653054583; _gcl_au=1.1.968973464.1653054857; _fbp=fb.2.1653054857837.1191215823; adminhtml=0v6scige90e0nlu15jt4n7udqa; X-Store=1; _gid=GA1.3.1180482770.1659366834; _gat=1; _BEAMER_FILTER_BY_URL_TyUhCZkT5208=false; _BEAMER_LAST_POST_SHOWN_TyUhCZkT5208=null; signashop_news_sidebar=1',
+    'Cookie': '_BEAMER_USER_ID_TyUhCZkT5208=be9751f2-ea47-4cab-af69-dee77fe5da6f; _BEAMER_FIRST_VISIT_TyUhCZkT5208=2022-05-20T13:49:42.519Z; _BEAMER_DATE_TyUhCZkT5208=2022-08-01T15:13:54.581Z; _ga=GA1.3.855274881.1653054583; _fbp=fb.2.1653054857837.1191215823; adminhtml=73gdmt2ou5namr3nfkah6l5bkn; X-Store=1; _gid=GA1.3.815718365.1660847966; _BEAMER_FILTER_BY_URL_TyUhCZkT5208=false',
     'Sec-Fetch-Dest': 'document',
     'Sec-Fetch-Mode': 'navigate',
     'Sec-Fetch-Site': 'same-origin',
     'Sec-Fetch-User': '?1',
     'Upgrade-Insecure-Requests': '1',
-    'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0',
+    'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:103.0) Gecko/20100101 Firefox/103.0',
     'Referer': '',
 
-    'BEAMER_DATE_TyUhCZkT5208':	'2022-05-20T13:49:42.800Z',
+    '_BEAMER_DATE_TyUhCZkT5208':	'2022-08-01T15:13:54.581Z',
     '_BEAMER_FILTER_BY_URL_TyUhCZkT5208': 'false',
     '_BEAMER_FIRST_VISIT_TyUhCZkT5208': '2022-05-20T13:49:42.519Z',
     '_BEAMER_USER_ID_TyUhCZkT5208': 'be9751f2-ea47-4cab-af69-dee77fe5da6f',
     '_fbp': 'fb.2.1653054857837.1191215823',
     '_ga': 'GA1.3.855274881.1653054583',
+    # '_gat':	'1',
     '_gcl_au': '1.1.968973464.1653054857',
-    '_gid': 'GA1.3.32295845.1657288887',
-    'adminhtml': 'tc6j0qe7mh976fdp31vno48l4o',
+    '_gid': 'GA1.3.755842421.1659969963',
+    'adminhtml': '4hohc8es9einm9d81e37bsqu4i',
+    # 'signashop_news_sidebar': '1',
     'X-Store': '1',
 }
 
 data = {}
-url = 'https://admin.geniodesks.signashop.com.br/index.php/painel/report_shopcart/abandoned/key/e3a53c12f47154056e4746639840ec66/filter/Y3JlYXRlZF9hdCU1QmxvY2FsZSU1RD1wdF9CUiZ1cGRhdGVkX2F0JTVCbG9jYWxlJTVEPXB0X0JS/form_key/bwt1wpOr7RDrkLSV/'
+url = 'https://admin.geniodesks.signashop.com.br/index.php/painel/report_shopcart/abandoned/key/65e43f367db62cbeb80a5cf3fc37514f/filter/Y3JlYXRlZF9hdCU1QmxvY2FsZSU1RD1wdF9CUiZ1cGRhdGVkX2F0JTVCbG9jYWxlJTVEPXB0X0JS/form_key/wfYQstHyqdZ2fzsM/'
 
 r = requests.post(url, json=data, headers=hed)
 
